@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/eqd2nsd.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 28px;
+    height: 100vh;
+    background-color:goldenrod;
+}
+
+/* Define class names for grid items and their expansion */
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Make specific items expand */
+.grid-item-a {
+    grid-column: span 6; /* Expands across two columns */
+    grid-row: span 2;    /* Occupies one row */
+    background-color: antiquewhite ;
+    border-radius: 10% 10%;
+    transition: border-radius 2s;
+}
+.grid-item-a:hover{
+    border-radius: 5% 15%;
+}
+.grid-item-b {
+    grid-column: span 1; /* Occupies one column */
+    grid-row: span 5;    /* Expands across two rows */
+    background-color: coral;
+    border-radius: 25% 10%;
+    transition: background-color 2s, border-radius 3s;
+}
+.grid-item-b:hover{
+    background-color: darkgoldenrod;
+    border-radius: 20% 35%;
+}
+.grid-item-c {
+    grid-column: span 4; /* Expands across two columns */
+    grid-row: span 4;    /* Expands across two rows */
+    background-color: whitesmoke;
+    border-radius: 10% 25%;
+    transition: border-radius 2s;
+}
+.grid-item-c:hover{
+    border-radius: 30% 15%;
+}
+.grid-item-d {
+    grid-column: span 1; /* Expands across two columns */
+    grid-row: span 4;    /* Expands across two rows */
+    background-color: coral;
+    border-radius: 15% 30%;
+    transition: background-color 2s, border-radius 3s;
+}
+.grid-item-d:hover{
+    background-color: darkgoldenrod;
+    border-radius: 40% 25%;
+}
+.grid-item-e {
+    grid-column: span 6; /* Expands across two columns */
+    grid-row: span 1;    /* Occupies one row */
+    background-color: antiquewhite;
+    border-radius: 50% 20% / 10% 40%;
+    transition: border-radius 2s;
+}
+.grid-item-e:hover{
+     border-radius: 20% 50% / 40% 10%;
+}
+
+      
+
+        /* Define more class names for remaining grid items as needed */
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            margin-left: 40px;
+            margin-right: 40px;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .boxa{
+            align-items: flex-end;
+            width: 1000px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "itc-avant-garde-gothic-pro", sans-serif;
+            font-size: 60px;
+            font-weight: 700px;
+            text-decoration: solid;
+            font-style: normal;
+            color: #db0000;
+            transition: letter-spacing 2s; color:antiquewhite 1s;
+
+        }
+        .boxahover{
+            letter-spacing: 100px;
+            color:antiquewhite;
+        }
+
+        .boxb{
+            align-items: flex-end;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "itc-avant-garde-gothic-pro", sans-serif;
+            font-size: 30px;
+            font-weight: 700px;
+            font-style: normal;
+            color: antiquewhite;
+            transition: font-size 1s; color: coral 2s;
+
+        }
+        .boxb:hover{
+            font-size: 35px;
+            color: coral;
+         }
+        
+        .boxc{
+            align-items: flex-end;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "itc-avant-garde-gothic-pro", sans-serif;
+            font-size: 60px;
+            font-weight: 700px;
+            font-style: normal;
+            color: coral;
+            transition-timing-function: ease-out;
+            transition: letter-spacing 2s, font-size 2s;
+        }
+        .boxc:hover{
+            font-size: 15px;
+            letter-spacing: 30px;
+        }
+        .boxd{
+            align-items: flex-end;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "itc-avant-garde-gothic-pro", sans-serif;
+            font-size: 30px;
+            font-weight: 700px;
+            font-style: normal;
+            color: antiquewhite;
+            transition: font-size 1s; color: coral 2s;
+        }
+        .boxd:hover{
+            font-size: 25px;
+            color:coral;
+
+        }
+        .boxe{
+            align-items: flex-end;
+            width: 400px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "itc-avant-garde-gothic-pro", sans-serif;
+            font-size: 30px;
+            font-weight: 700px;
+            font-style: normal;
+            color: #db0000;
+            animation-duration: 3s;
+            animation-direction: alternate;
+
+        }
+        .boxe:hover{
+          @keyframes example{
+            from{background-color:#db0000 ;
+               transform: scale(1);
+               filter: blur(0px);
+              }
+             to {background-color:antiquewhite;
+                transform: scale(2);
+                 filter: blur(30px);
+           }
+        }
+        letter-spacing: 4px;
+    }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Use the new class names for grid items -->
+        <div class="grid-item grid-item-a">
+            <div class="boxa">
+                <span class="text"><strong>DISTRACTIONS</strong></span>
+            </div>
+        </div>
+        <div class="grid-item grid-item-b">
+            <div class="boxb">
+                <span class="text"><a style="text-decoration: none; color:antiquewhite" href="https://www.pinterest.com/jeremiahharrington12/mens-fashion/" target="_blank">clothes</a></span>
+            </div>
+        </div>
+        <div class="grid-item grid-item-c">
+            <div class="boxc">
+                <span class="text"><a style="text-decoration: none; color:coral" href="https://www.pinterest.com/jeremiahharrington12/industrial-design-stuff-i-like/" target="_blank">designs</a></span>
+            </div>
+        </div>
+        <div class="grid-item grid-item-d">
+            <div class="boxd">
+                <span class="text"><a style="text-decoration: none; color: rgb(251, 228, 124)" href="https://www.youtube.com/watch?v=FaqHyMOxqiw&list=PLXz6Pf8rae1mIGQ8IdpggWP2RmW1wmXsavideo"target="_blank">video essay</a></span>
+            </div>
+        </div>
+        <div class="grid-item grid-item-e">
+            <div class="boxe">
+                <span class="text"><a style= "text-decoration: none; color: #db0000" href="https://jharri0202c9.myportfolio.com/work" target="_blank">portfolio I never finish</a></span>
+            </div>
+        </div>
+     
+      
+        <!-- Add more grid items with appropriate class names -->
+    </div>
+</body>
+</html>
